@@ -1,9 +1,33 @@
-<table>
+<!-- <table class="table">
   <% @artists.each do |artist| %>
-  <tr>
-    <td><img src="<%= artist.image_url %>"></td>
-    <td><%= artist.name %></td>
-    <td><%= link_to "Ver más", artist %></td>
-  </tr>
+    <tr><img src="<%= artist.image_url %>"></td>
+    <tr><%= artist.name %></td>
+    <tr><%= link_to "Ver más", artist %></td>
   <% end %>
-</table>
+</table> -->
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Real Music</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Artistas <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Mi música</a>
+    </div>
+    <span class="navbar-text">
+      Mi cuenta
+    </span>
+  </div>
+</nav><br>
+
+  <div class="row">
+    <% @artists.each do |artist| %>
+    <div class="col-sm-3">
+      <img src="<%= artist.image_url %>">
+      <p><%= artist.name %></p>
+      <button type="button" class="btn"><%= link_to "Ver más", artist %></button>
+    </div>
+    <% end %>
+  </div>
