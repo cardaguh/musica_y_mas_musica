@@ -1,0 +1,9 @@
+<table>
+  <% @artists.each do |artist| %>
+  <tr>
+    <td><img src="<%= artist.image_url %>"></td>
+    <td><%= artist.name %></td>
+    <td><%= link_to "Ver más", artist %></td>
+  </tr>
+  <% end %>
+</table>
